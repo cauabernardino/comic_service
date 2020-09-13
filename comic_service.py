@@ -6,6 +6,20 @@ import subprocess
 from bs4 import BeautifulSoup
 
 
+def main():
+    # Define directory
+    dir = os.path.join(os.environ['HOME'], 'comicvault') 
+    
+    # New comic url to download
+    comic = scraper(dir)
+    
+    # Checking and downloading
+    check_dir(dir)
+    get_comics(dir, comic)
+
+    return 0
+
+
 def scraper(directory):
     """
     Gets an url for a comic that was not downloaded recently.
@@ -38,7 +52,7 @@ def get_comics(directory, comic_url):
 def check_dir(directory, qty=2):
     """
     Checks for the chosen quantity of files in the given directory.
-    The 'qty' parameters is set to 2 by default.
+    The 'qty' parameters is the maximum amount of files to keep in the local filesystem.
     """
     # Initialization of dict to store values
     files = {}
@@ -63,12 +77,4 @@ def check_dir(directory, qty=2):
     
 
 if __name__ == "__main__":
-    # Define directory
-    dir = os.path.join(os.environ['HOME'], 'comicvault') 
-    
-    # New comic url to download
-    comic = scraper(dir)
-    
-    # Checking and downloading
-    check_dir(dir)
-    get_comics(dir, comic)
+    main()

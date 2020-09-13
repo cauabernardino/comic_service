@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 echo "Creating target directory...";
-mkdir $HOME/comicvault;
+dir=$HOME/comicvault;
+mkdir -p $dir;
 
 echo "Installing dependencies...";
 python3 -m pip install -r ./requirements.txt;
@@ -19,3 +20,6 @@ rm tmpfile;
 echo
 echo "The current crontable is now:";
 crontab -l;
+
+echo
+echo "The comics will be stored at $dir"
