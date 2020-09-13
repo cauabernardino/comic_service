@@ -2,7 +2,7 @@
 
 Download a new [xkcd](https://xkcd.com/) comic every hour and keeps a chosen quantity of them in the local filesystem at a time. Default is set on 2 comics.
 
-## Remarks
+## Remarks ✔
 
 - Made for Linux systems
 - It requires that you have `wget` installed on your system

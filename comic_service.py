@@ -65,7 +65,7 @@ def check_dir(directory, qty=2):
             dl_time = os.path.getctime(path)
             files[path] =  dl_time
 
-    # Let maximum 2 files, delete oldest one
+    # Let maximum 'qty' files, delete oldest one
     sorted_files = sorted(files.items(), key=lambda x: x[1], reverse=True)
     
     while len(sorted_files) >= qty:   
