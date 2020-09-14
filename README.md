@@ -6,6 +6,7 @@ Download a new [xkcd](https://xkcd.com/) comic every hour and keeps a chosen qua
 
 - Made for Linux systems
 - It requires that you have `wget` installed on your system
+- Scraping is made with `beautifulsoup4`
 
 ## How to run ⚙
 
@@ -22,7 +23,7 @@ $ chmod +x addservice.sh
 $ ./addservice.sh
 ```
 
-- It will automatically setup the `comic_service.py` script into the crontable to run every full hour.
+- It will automatically create the target directory, install requirements and setup the `comic_service.py` script into the crontable to run every full hour.
 
 - The comics will be stored at `/comicvault` in your home directory
 
