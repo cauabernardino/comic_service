@@ -11,7 +11,12 @@ echo "Making the script executable..."
 chmod +x $PWD/comic_service.py;
 
 echo "Appending (or creating) crontable...";
+# Service run every full hour
 cronjob="0 * * * * $PWD/comic_service.py > /dev/null 2>&1";
+
+# Service run every minute
+# cronjob="* * * * * $PWD/comic_service.py > /dev/null 2>&1";
+
 crontab -l > tmpfile;
 echo "$cronjob" >> tmpfile; 
 crontab tmpfile;

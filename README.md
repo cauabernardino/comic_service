@@ -22,8 +22,9 @@ $ chmod +x addservice.sh
 
 $ ./addservice.sh
 ```
-
 - It will automatically create the target directory, install requirements and setup the `comic_service.py` script into the crontable to run every full hour.
+
+    -  If you want the service to run every minute, you can change the `cronjob` variable in `addservice.sh`, by commenting current one and un-commenting the other.
 
 - The comics will be stored at `/comicvault` in your home directory
 
