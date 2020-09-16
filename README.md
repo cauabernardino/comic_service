@@ -28,4 +28,9 @@ $ ./addservice.sh
 
 - The comics will be stored at `/comicvault` in your home directory
 
+- Checking the `syslog` can be used to check the execution times of the script
+```bash
+$ tail -f /var/log/syslog 
+```
+
 - To remove the service you can use `crontab -e` to edit your crontable OR use `crontab -r` to remove it completely
